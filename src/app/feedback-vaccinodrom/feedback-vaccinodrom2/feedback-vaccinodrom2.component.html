@@ -1,0 +1,179 @@
+<div class="row mx-0">
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row mx-0 p">
+        <div class="col-lg-3 text-center pt-4">
+          <img alt="" class="img1" src="../../../assets/images/logo-ministre.svg">
+        </div>
+        <div class="col-lg-6">
+          <h1 class ="titre2">
+            Quel est le service qui vous a déplu au sein de notre centre de vaccination ?
+          </h1>
+        </div>
+        <div class="col-lg-3 text-end">
+          <img alt="" class="img2" src="../../../assets/images/logo-vaccin.png">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container img3">
+      <div class="row mx-auto pt-3">
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Higiène" (change)="GetData($event)">
+            Higiène
+          </label>
+        </div>
+
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Qualité de la consultation" (change)="GetData($event)">
+            Qualité de la consultation
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label my-5">
+            <input class="form-check-input mx-3" type="checkbox" value="Autres" (change)="GetData($event)">
+            Autres…
+          </label>
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Temps d’attente" (change)="GetData($event)">
+            Temps d’attente
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Qualité de Vaccination" (change)="GetData($event)">
+            Qualité de Vaccination
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Qualité du dépistage" (change)="GetData($event)">
+            Qualité du dépistage
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Service du personnel médical" (change)="GetData($event)">
+            Service du personnel médical
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Service des directeurs du vaccinodromes" (change)="GetData($event)">
+            Service des directeurs du vaccinodromes
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Service du personnel d’accueil / agent de sécurité" (change)="GetData($event)">
+            Service du personnel d’accueil / agent de sécurité
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 d-flex align-items-center justify-content">
+        </div>
+      </div>
+      <div class="pt-5 pt">
+        <div class=" col-lg-11 form-group pt-1 mx-4">
+          <label class="label-text mx-3 mt-1">
+            Si Autres, faites-nous part de vos recommandations, nous sommes à votre écoute ?
+            <input class="form-control mx-3 mt-4" type="text" id="comment">
+          </label>
+        </div>
+      </div>
+      <div class="col-lg-11 text-end pt-5 pt3 pb-5 mx-4">
+        <button  class="btn" type="submit">
+          Terminer
+        </button>
+      </div>
+
+  </div>
+<!--  <form [formGroup]="feedback2_form" (ngSubmit)="submit()">
+    <div class="container img3">
+      <div class="row mx-auto pt-3">
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Hygiène" name="check-list">
+          <label class="form-check-label" >
+            Hygiène
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Qualité de la consultation" name="check-list">
+          <label class="form-check-label" >
+            Qualité de la consultation
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Autres" name="check-list">
+          <label class="form-check-label my-5" >
+            Autres…
+          </label>
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Temps d’attente" name="check-list">
+          <label class="form-check-label">
+            Temps d’attente
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Qualité de Vaccination" name="check-list">
+          <label class="form-check-label" >
+            Qualité de Vaccination
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Qualité du dépistage" name="check-list">
+          <label class="form-check-label" >
+            Qualité du dépistage
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Service du personnel médical" name="check-list">
+          <label class="form-check-label" >
+            Service du personnel médical
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Service des directeurs du vaccinodromes" name="check-list">
+          <label class="form-check-label" >
+            Service des directeurs du vaccinodromes
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <input class="form-check-input mx-3" type="checkbox" value="Service du personnel d’accueil / agent de sécurité" name="check-list">
+          <label class="form-check-label" >
+            Service du personnel d’accueil / agent de sécurité
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 d-flex align-items-center justify-content">
+        </div>
+      </div>
+      <section class="pt-5 pt">
+        <div class=" col-lg-11 form-group pt-1 mx-4">
+          <label class="label-text mx-3 mt-1" for="comment"> Si Autres, faites-nous part de vos recommandations, nous sommes à votre écoute ?</label>
+          <textarea class="form-control mx-3 mt-4" rows="1" id="comment"></textarea>
+        </div>
+      </section>
+      <section class="col-lg-11 text-end pt-5 pt3 pb-5 mx-4">
+        <button  class="btn2">
+          <input class="btn" value="Terminer" type="submit" />
+        </button>
+      </section>
+    </div>
+  </form>-->
+</div>
+<!--<div class="container">
+  <p>Value: {{  | json }}</p>
+</div>-->

@@ -1,1 +1,208 @@
 /* You can add global styles to this file, and also import other style files */
+@media (max-width: 1024px) {
+
+  /* reset */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* general */
+
+  html,
+  body {
+    font-family: 'Prosto One', cursive;
+    display: inline-grid;
+
+  }
+
+
+  /* header */
+
+  .header {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 0px 32px 32px 32px;
+    opacity: 1;
+  }
+
+  .container-fluid {
+    display: inline-block;
+    margin: auto;
+    padding-left: 3%;
+    padding-right: 1%;
+  }
+
+  .container {
+    display: inline-block;
+    margin: auto;
+    padding: 0 5% 0 5%;
+  }
+
+  .titre{
+    font-size: 42px;
+    padding-top: 50px;
+    font-weight: bold;
+    font-family: 'Prosto One';
+    letter-spacing: 0px;
+    color: #285BA9;
+    opacity: 1;
+  }
+
+  .titre2 {
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Prosto One';
+    letter-spacing: 0px;
+    color: #285BA9;
+    opacity: 1;
+  }
+
+  .img1 {
+    background: transparent 0% 0% no-repeat padding-box;
+    max-width: 67%;
+    opacity: 1;
+  }
+
+  .img2 {
+    background: transparent 0% 0% no-repeat padding-box;
+    max-width: 100%;
+    align-content: end;
+    opacity: 1;
+  }
+
+  .img4 {
+    opacity: 1;
+  }
+
+  .img3 {
+    background: transparent url('./assets/images/body-image.png') 0% 0% no-repeat padding-box;
+    height: 95vh;
+    max-width: 100%;
+    align-content: center;
+    background-size: cover;
+    opacity: 1;
+  }
+
+  .img5{
+    width: 210px;
+    height: 210px;
+    opacity: 1;
+  }
+
+  .img6 {
+    display: flex;
+    background: transparent url('./assets/images/footer-image.png') 0% 0% no-repeat padding-box;
+    height: 16vh;
+    width: 100%;
+    align-content: center;
+    background-size: cover;
+    opacity: 1;
+  }
+
+  .emoji img{
+    max-width: 34%;
+  }
+
+  hr:not([size]) {
+    height: 1px;
+    border: 1px solid white;
+    opacity: 0.5;
+  }
+
+  .radio-input{
+    width: 15px;
+    height: 15px;
+    background: #FF798E 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 3px solid #FFFFFF;
+    transform: scale(2);
+  }
+
+  .text{
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Prosto One';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+
+  .btn{
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+    font-family: 'Prosto One';
+    letter-spacing: 0px;
+    color: #285BA9;
+    width: 250px;
+    height: 70px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 2px 2px 0 2px #80A7E2;
+    border-radius: 18px;
+    opacity: 1;
+  }
+
+
+  .form-check-input{
+    width: 35px;
+    height: 35px;
+    box-shadow: 4px 4px 0 #FFFFFF;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    opacity: 1;
+  }
+
+  .form-check-label{
+    width: 342px;
+    height: 35px;
+    display: contents;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Prosto One';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+
+  .label-text{
+    /*width: 1120px;*/
+    height: 23px;
+    text-align: left;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Prosto One';
+    letter-spacing: 0px;
+    color: #285BA9;
+    opacity: 1;
+  }
+
+  .form-group{
+    /*width: 1120px;*/
+    height: 115px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 2px 2px 0 5px #80A7E2;
+    border-radius: 24px;
+    opacity: 1;
+  }
+
+  .form-control{
+    width: 94%;
+    border-color: #285BA9;
+    border-right: hidden;
+    border-left: hidden;
+    border-radius: 0px;
+  }
+
+  .pt{
+    padding-top: 1.5rem !important;
+  }
+
+
+}
+
+

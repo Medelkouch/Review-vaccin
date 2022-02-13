@@ -1,1 +1,95 @@
-<p>feedback-vaccinodrom works!</p>
+<div class="row mx-0">
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row mx-0">
+        <div class="col-lg-3 text-center">
+          <img alt="" class="img1 pt-4" src="./assets/images/logo-ministre.svg">
+        </div>
+        <div class="col-lg-6 text-center">
+          <h1 class="titre2">
+            Comment évaluez-vous est votre niveau de satisfaction au sein du vaccinodrome?
+          </h1>
+        </div>
+        <div class="col-lg-3 text-center">
+          <img alt="" class="img2" src="./assets/images/logo-vaccin.png">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container row mx-0 img3">
+    <div class="row mx-0 text-center pt-3 emoji" >
+      <div class="col-lg-3 pt-3" >
+      </div>
+      <div class="col-lg-3 pt-5" id="emoji0" >
+        <img alt="" src="./assets/images/emoji0.png">
+      </div>
+      <div class="col-lg-3 pt-5" id="emoji1" >
+        <img alt="" src="./assets/images/emoji1.png">
+      </div>
+      <div class="col-lg-3 pt-5" id="emoji2" >
+        <img alt="" src="./assets/images/emoji2.png">
+      </div>
+    </div>
+    <form [formGroup]="feedback_form">
+      <div class="row mx-0 text-center pt-2" >
+        <div class="col-lg-3 pt-4" >
+          <div class="text">
+            <p>Qualité d’accueil ( service des hôtesses )</p>
+          </div>
+        </div>
+        <div class="col-lg-3 pt-5" >
+          <input class="radio-input" type="radio" formControlName="hostess" value="0">
+        </div>
+        <div class="col-lg-3 pt-5" >
+          <input class="radio-input" type="radio" formControlName="hostess" value="1">
+        </div>
+        <div class="col-lg-3 pt-5" >
+          <input class="radio-input" type="radio" formControlName="hostess" value="2">
+        </div>
+      </div>
+      <div class="row"><div class="col-lg-12"><hr></div></div>
+      <div class="row mx-0 text-center pt-2" >
+        <div class="col-lg-3 pt-1" >
+          <div class="text">
+            <p>Qualité du circuit et temps d’attente</p>
+          </div>
+        </div>
+        <div class="col-lg-3 pt-4" >
+          <input class="radio-input" type="radio" formControlName="flux" value="0">
+        </div>
+        <div class="col-lg-3 pt-4" >
+          <input class="radio-input" type="radio" formControlName="flux" value="1">
+        </div>
+        <div class="col-lg-3 pt-4" >
+          <input class="radio-input" type="radio" formControlName="flux" value="2">
+        </div>
+      </div>
+      <div class="row"><div class="col-lg-12"><hr></div></div>
+      <div class="row mx-0 text-center pt-2" >
+        <div class="col-lg-3 pt-1" >
+          <div class="text">
+            <p>Service de nos infirmiers</p>
+          </div>
+        </div>
+        <div class="col-lg-3 pt-4" >
+          <input class="radio-input" type="radio" formControlName="nurse" value="0">
+        </div>
+        <div class="col-lg-3 pt-4" >
+          <input class="radio-input" type="radio" formControlName="nurse" value="1">
+        </div>
+        <div class="col-lg-3 pt-4" >
+          <input class="radio-input" type="radio" formControlName="nurse" value="2">
+        </div>
+      </div>
+      <div class="col-lg-12 text-end pt-5">
+        <button  class="btn" type="button" routerLink="/feedbackVaccinodrom2" >
+          Suivant
+          <img alt="" src="./assets/images/icon-submit.png">
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <p>Value: {{ feedback_form.value | json }}</p>
+</div>
