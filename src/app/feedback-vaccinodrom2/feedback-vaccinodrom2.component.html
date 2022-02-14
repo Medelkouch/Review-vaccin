@@ -1,0 +1,104 @@
+<div class="row mx-0">
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row mx-0 p">
+        <div class="col-lg-3 text-center pt-4">
+          <img alt="" class="img1" src="../../assets/images/logo-ministre.svg">
+        </div>
+        <div class="col-lg-6">
+          <h1 class ="titre2">
+            Quel est le service qui vous a déplu au sein de notre centre de vaccination ?
+          </h1>
+        </div>
+        <div class="col-lg-3 text-end">
+          <img alt="" class="img2" src="../../assets/images/logo-vaccin.png">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container img3">
+    <form [formGroup]="feedback2_form" (ngSubmit)="submit()">
+      <div class="row mx-auto pt-3">
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Higiène" formControlName="checkDirecteur1">
+            Higiène
+          </label>
+        </div>
+
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Qualité de la consultation" formControlName="checkDirecteur2">
+            Qualité de la consultation
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label my-5">
+            <input class="form-check-input mx-3" type="checkbox" value="Autres" formControlName="checkOthers">
+            Autres…
+          </label>
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Temps d’attente" formControlName="checkDirecteur4">
+            Temps d’attente
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Qualité de Vaccination" formControlName="checkDirecteur5">
+            Qualité de Vaccination
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Qualité du dépistage" formControlName="checkDirecteur6">
+            Qualité du dépistage
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Service du personnel médical" formControlName="checkDirecteur7">
+            Service du personnel médical
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 pt d-flex align-items-center justify-content">
+
+        </div>
+        <div class="col-lg-4 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Service des directeurs du vaccinodromes" formControlName="checkDirecteur8">
+            Service des directeurs du vaccinodromes
+          </label>
+        </div>
+        <div class="col-lg-5 pt-5 pt d-flex align-items-center justify-content">
+          <label class="form-check-label">
+            <input class="form-check-input mx-3" type="checkbox" value="Service du personnel d’accueil / agent de sécurité" formControlName="checkDirecteur9">
+            Service du personnel d’accueil / agent de sécurité
+          </label>
+        </div>
+        <div class="col-lg-3 pt-5 d-flex align-items-center justify-content">
+        </div>
+      </div>
+      <div class="pt-5 pt">
+        <div class=" col-lg-11 form-group pt-1 mx-4">
+          <label class="label-text mx-3 mt-1">
+            Si Autres, faites-nous part de vos recommandations, nous sommes à votre écoute ?
+            <input class="form-control mx-3 mt-4" type="text" id="comment" formControlName="checkDirecteur10">
+          </label>
+        </div>
+      </div>
+      <div class="col-lg-11 text-end pt-5 pt3 pb-5 mx-4">
+        <button  class="btn" type="submit">
+          Terminer
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>
+<div class="container">
+  <p>Value: {{ this.directeurCheckList | json }}</p>
+</div>

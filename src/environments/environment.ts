@@ -2,8 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+
 export const environment = {
-  production: false
+  production: false,
+  API: 'http://197.230.172.211:3000/v1/events/feedback',
+  hmr: false,
 };
 
 /*

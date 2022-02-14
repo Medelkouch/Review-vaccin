@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import { Subscription } from 'rxjs';
+import {Subscription} from 'rxjs';
+import {SharedDataService} from "../core/services/shared-data.service";
 
 @Component({
   selector: 'app-feedback-vaccinodrom',
@@ -8,17 +9,17 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./feedback-vaccinodrom.component.css']
 })
 export class FeedbackVaccinodromComponent implements OnInit, OnDestroy {
-  public feedback_form: FormGroup = this.fb.group({
-    hostess : '',
-    flux: '',
-    nurse: ''
-  });
 
+  feedback_form: FormGroup = this.fb.group({
+      hostess: 0,
+      flux: 0,
+      nurse: 0
+  });
 
 
   public subscriptions = new Subscription();
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private sharedService: SharedDataService) {}
 
   ngOnInit(): void {
     this.subscriptions.add(
@@ -32,4 +33,7 @@ export class FeedbackVaccinodromComponent implements OnInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
+  SendData() {
+    this.sharedService.changeMessage(this.feedback_form.value)
+  }
 }

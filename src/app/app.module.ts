@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FeedbackVaccinodromComponent } from './feedback-vaccinodrom/feedback-vaccinodrom.component';
-import { FeedbackVaccinodrom2Component } from './feedback-vaccinodrom/feedback-vaccinodrom2/feedback-vaccinodrom2.component';
+import { FeedbackVaccinodrom2Component } from './feedback-vaccinodrom2/feedback-vaccinodrom2.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 import {FeedbackVaccinodromFinComponent} from "./feedback-vaccinodrom-fin/feedback-vaccinodrom-fin.component";
 import {APP_ROUTES} from "./app.routes";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -22,6 +23,7 @@ import {APP_ROUTES} from "./app.routes";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgbModule,
     RouterModule.forRoot(APP_ROUTES),
     ReactiveFormsModule,

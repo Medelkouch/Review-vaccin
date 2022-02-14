@@ -20,9 +20,20 @@
     "module": "es2020",
     "lib": [
       "es2020",
-      "dom"
+      "es2016",
+      "dom",
+      "ES5",
+      "ES2015",
+      "DOM",
+      "ScriptHost"
     ]
   },
+  "exclude": [
+    "node_modules",
+    "public/js",
+    "assets/app/polyfills.ts"
+  ],
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
