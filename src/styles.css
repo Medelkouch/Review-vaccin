@@ -80,7 +80,7 @@
 
   .img3 {
     background: transparent url('./assets/images/body-image.png') 0% 0% no-repeat padding-box;
-    height: 95vh;
+    height: 97vh;
     max-width: 100%;
     align-content: center;
     background-size: cover;
@@ -191,7 +191,7 @@
   }
 
   .form-control{
-    width: 94%;
+    width: 98%;
     border-color: #285BA9;
     border-right: hidden;
     border-left: hidden;

@@ -21,10 +21,20 @@ export class FeedbackVaccinodromComponent implements OnInit, OnDestroy {
 
   constructor(private fb: FormBuilder, private sharedService: SharedDataService) {}
 
+  services: any = {
+    hostess: 0,
+    flux: 0,
+    nurse: 0
+  };
   ngOnInit(): void {
     this.subscriptions.add(
       this.feedback_form.valueChanges.subscribe(services => {
-        console.log(services);
+        for (const [key, value] of Object.entries(services)) {
+          if (typeof value === "string") {
+            this.services[key] = parseInt(value)
+          }
+        }
+        console.log(this.services)
       })
     );
   }
@@ -34,6 +44,6 @@ export class FeedbackVaccinodromComponent implements OnInit, OnDestroy {
   }
 
   SendData() {
-    this.sharedService.changeMessage(this.feedback_form.value)
+    this.sharedService.changeMessage(this.services)
   }
 }
