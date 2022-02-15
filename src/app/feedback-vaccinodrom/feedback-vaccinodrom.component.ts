@@ -34,7 +34,7 @@ export class FeedbackVaccinodromComponent implements OnInit, OnDestroy {
             this.services[key] = parseInt(value)
           }
         }
-        console.log(this.services)
+        /*console.log(this.services)*/
       })
     );
   }

@@ -26,7 +26,7 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
     checkDirecteur7 : false,
     checkDirecteur8 : false,
     checkDirecteur9 : false,
-    checkDirecteur10 : '',
+    checkDirecteur10 : ''
   });
 
 
@@ -42,6 +42,7 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
 
   public subscriptions = new Subscription();
 
+
   ngOnInit(): void {
     this.subscriptions.add(
       this.feedback2_form.valueChanges.subscribe( formValue => {
@@ -51,10 +52,12 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
     this.sharedService.currentMessage.subscribe(
       res => this.services = res
     );
+
   }
   // @ts-ignore
+  private filteredDirecteurCheckList: string[] = [];
+  // @ts-ignore
   private getFormValues(formValue) {
-    console.log(formValue);
     const controls: { text: string, value: string} [] = Object.keys(formValue).map(key => {
       return {text: key, value: key}
     });
@@ -68,11 +71,12 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
     });
     let d = this.feedback2_form.get('checkDirecteur10')!.value;
     if (d) {
-      this.directeurCheckList.push(d)
+      this.directeurCheckList.push(d);
     }
-
-    console.log(this.directeurCheckList)
+    this.filteredDirecteurCheckList = this.directeurCheckList.filter(item => item !== '');
   }
+
+
 
   ngOnDestroy() {
     this.subscriptions.unsubscribe();
@@ -82,8 +86,9 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
 
     let feedback: Feedback = {
         services: this.services,
-        data: this.directeurCheckList
+        data: this.filteredDirecteurCheckList
     }
+    console.log(feedback)
 
     this.feedbackService.Feedback(feedback).pipe(
       finalize(() => {
