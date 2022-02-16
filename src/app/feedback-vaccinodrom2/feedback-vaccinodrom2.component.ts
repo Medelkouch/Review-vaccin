@@ -6,7 +6,6 @@ import {SharedDataService} from "../core/services/shared-data.service";
 import {FeedbackFormService} from "../core/services/feedback-form.service";
 import {Router} from "@angular/router";
 import {Feedback} from "../core/models/feedback";
-/*import {Feedback} from "../../feedback";*/
 
 
 
@@ -31,6 +30,7 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
 
 
   directeurCheckList : any[] = [];
+  filteredDirecteurCheckList: string[] = [];
   services: any;
 
   constructor(
@@ -54,15 +54,14 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
     );
 
   }
-  // @ts-ignore
-  private filteredDirecteurCheckList: string[] = [];
-  // @ts-ignore
-  private getFormValues(formValue) {
+
+
+  private getFormValues(formValue: any) {
     const controls: { text: string, value: string} [] = Object.keys(formValue).map(key => {
       return {text: key, value: key}
     });
 
-    this.directeurCheckList = [];
+
     controls.forEach(control => {
       const controlValue: string = FeedbackValueMap.get(control.text)!;
       if (formValue[control.text]) {
@@ -85,8 +84,8 @@ export class FeedbackVaccinodrom2Component implements OnInit, OnDestroy {
   submit() {
 
     let feedback: Feedback = {
-        services: this.services,
-        data: this.filteredDirecteurCheckList
+      services: this.services,
+      data: this.filteredDirecteurCheckList
     }
     console.log(feedback)
 

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable, of} from "rxjs";
+import {Observable} from "rxjs";
 import {Feedback} from "../models/feedback";
-import {FeedbackValueMap} from "../data/map";
 import {environment} from "../../../environments/environment";
 
 const url = environment.API;
@@ -17,9 +16,4 @@ export class FeedbackFormService {
   public Feedback(data: Feedback): Observable<Feedback> {
     return this.httpClient.post<Feedback>(url, data)
   }
-
-
-
-
-
 }

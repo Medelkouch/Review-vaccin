@@ -26,6 +26,7 @@ export class FeedbackVaccinodromComponent implements OnInit, OnDestroy {
     flux: 0,
     nurse: 0
   };
+
   ngOnInit(): void {
     this.subscriptions.add(
       this.feedback_form.valueChanges.subscribe(services => {
